@@ -14,15 +14,16 @@
           Réservation
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Prendre une réservation</a>
-             
-        <%= link_to 'Administration', reservation_index_path, class:"dropdown-item"%>      
+                      
+        <%= link_to 'Prendre une réservation', reservation_index_path, class:"dropdown-item"%>      
     
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Voir ses réservations</a>
+
+         <%= link_to 'Voir ses réservations', my_reservation_path, class:"dropdown-item"%>
+
         </div>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Administration</a>
+          <li class="nav-item <%= 'active' if request.path == administration_index_path %>">
+        <%= link_to 'Administration', administration_index_path, class:"nav-link" %>      
       </li>
       </li>
     </ul>
